@@ -37,7 +37,7 @@ namespace SeleniumMSFlow.Drivers
                 options.AddArguments("start-maximized");
                 options.AddArguments("--disable-extensions");
 
-                return new RemoteWebDriver(new Uri("http://10.10.24.250:666/wd/hub"), options);
+                return new RemoteWebDriver(new Uri("http://10.10.24.250:4444"), options);
             }
         }
 
@@ -55,7 +55,7 @@ namespace SeleniumMSFlow.Drivers
                 options.AddArguments("start-maximized");
                 options.AddArguments("--disable-extensions");
 
-                return new RemoteWebDriver(new Uri("http://localhost:666/wd/hub"), options);
+                return new RemoteWebDriver(new Uri("http://10.10.24.250:4444"), options);
             }
         }
 
@@ -73,7 +73,7 @@ namespace SeleniumMSFlow.Drivers
                 options.AddUserProfilePreference("profile.default_content_setting_values.automatic_downloads", 1);
                 options.AddArguments("--ignore-certificate-errors");
                 options.AddArguments("start-maximized");
-                return new RemoteWebDriver(new Uri("http://10.10.24.250:666/wd/hub"), options);
+                return new RemoteWebDriver(new Uri("http://10.10.24.250:4444"), options);
             }
         }
 
@@ -91,7 +91,7 @@ namespace SeleniumMSFlow.Drivers
                 options.AddArguments("start-maximized");
                 options.AddArguments("--disable-extensions");
 
-                return new ChromeDriver("C:\\", options);
+                return new RemoteWebDriver(new Uri("http://localhost:4444"), options);
             }
         }
 
@@ -111,7 +111,7 @@ namespace SeleniumMSFlow.Drivers
                 options.AddArguments("start-maximized");
 
 
-                return new ChromeDriver("C:\\", options);
+                return new RemoteWebDriver(new Uri("http://localhost:4444"), options);
 
             }
         }
