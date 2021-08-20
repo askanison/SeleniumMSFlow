@@ -29,7 +29,7 @@ namespace SeleniumMSFlow.Hooks
         public void BeforeMobileScenario()
         {
             //driver = browserDrivers.GetWebDriver(BrowserType.ChromeMobileLocal);
-            driver = browserDrivers.GetWebDriver(BrowserType.ChromeMobileRemote);
+            driver = browserDrivers.GetWebDriver(BrowserType.ChromeMobileLocal);
 
         }
 
@@ -37,7 +37,7 @@ namespace SeleniumMSFlow.Hooks
         public void BeforeDesktopScenario()
         {
             //driver = browserDrivers.GetWebDriver(BrowserType.ChromeDesktopLocal);
-            driver = browserDrivers.GetWebDriver(BrowserType.ChromeDesktopRemote);
+            driver = browserDrivers.GetWebDriver(BrowserType.ChromeDesktopLocal);
 
         }
 

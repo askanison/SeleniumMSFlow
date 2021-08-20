@@ -193,6 +193,7 @@ namespace SeleniumMSFlow
 
         public static ReadOnlyCollection<IWebElement> FindElements(IWebDriver driver, string by) => driver.FindElements(By.XPath(by));
 
+        [Obsolete]
         public static void SafeClickToElement(IWebDriver driver, string by, int timer = 5000)
         {
             DefaultWait<IWebDriver> wait = new(driver);
@@ -226,6 +227,7 @@ namespace SeleniumMSFlow
         }
 
 
+        [Obsolete]
         public static void WaitUntilVisible(WebDriverWait wait, string element)
         {
             try
