@@ -310,14 +310,14 @@ namespace SeleniumMSFlow
         {
             MailMessage mail = new() 
             {
-                From = new MailAddress("your mail@gmail.com"),
+                From = new MailAddress("yourmail@gmail.com"),
                 Subject = Subject,
                 Body = "For test results, check attachment"
             };
             SmtpClient SmtpServer = new("smtp.gmail.com") 
             {
                 Port = 587,
-                Credentials = new NetworkCredential("tavtmiani@gmail.com", "Ee8174568"),
+                Credentials = new NetworkCredential("yourmail@gmail.com", "Password"),
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false
@@ -328,6 +328,55 @@ namespace SeleniumMSFlow
             SmtpServer.Send(mail);
 
            
+        }
+
+
+
+        public static void MobileHeaderNavigation(IWebDriver driver, string page)
+        {
+            try
+            {
+                if (!ElementVisible(driver, "//div[@data-id='mobile-header-navigation']"))
+                    ClickToElement(driver, "//a[@data-id='mobile-ab-logo']", "Mobile Adjarabet logo not found");
+                switch (page.ToLower())
+                {
+                    case "home page":
+                        ClickToElement(driver, "//a[contains(@href,'/Aviator')]", "Mobile Aviator button not found in header navigation");
+                        break;
+                    case "sportsbook":
+                        ClickToElement(driver, "//a[contains(@href,'/Sportsbook')]", "Mobile Sportsbook button not found in header navigation");
+                        break;
+                    case "Exchange":
+                        ClickToElement(driver, "//a[contains(@href,'/Exchange')]", "Mobile Exchange button not found in header navigation");
+                        break;
+                    case "Slots":
+                        ClickToElement(driver, "//a[contains(@href,'/Slots')]", "Mobile Slots button not found in header navigation");
+                        break;
+                    case "casino":
+                        ClickToElement(driver, "//a[contains(@href,'/Casino')]", "Mobile Casino button not found in header navigation");
+                        break;
+                    case "poker":
+                        ClickToElement(driver, "//a[contains(@href,'/Poker')]", "Mobile Poker button not found in header navigation");
+                        break;
+                    case "table games":
+                        ClickToElement(driver, "//a[contains(@href,'/Games')]", "Mobile Table Games button not found in header navigation");
+                        break;
+                    case "aviator":
+                        ClickToElement(driver, "//a[contains(@href,'/Aviator')]", "Mobile Aviator button not found in header navigation");
+                        break;
+                    case "turbo games":
+                        ClickToElement(driver, "//a[contains(@href,'/Poker')]", "Mobile Turbo Games button not found in header navigation");
+                        break;
+
+                    default:
+                        throw new Exception($"Header navigatiob button for {page} doesn't exist");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

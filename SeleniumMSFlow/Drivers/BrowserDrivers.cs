@@ -17,7 +17,6 @@ namespace SeleniumMSFlow.Drivers
                 BrowserType.ChromeMobileRemote => RemoteChromeMobile,
                 BrowserType.ChromeDesktopLocal => LocalChromeDesktop,
                 BrowserType.ChromeDesktopRemote => RemoteChromeDesktop,
-                BrowserType.ChromeMobileLocalServer => MobileChromeServer,
                 _ => throw new NotSupportedException("not supported browser: <null>"),
             };
         }
@@ -37,27 +36,11 @@ namespace SeleniumMSFlow.Drivers
                 options.AddArguments("start-maximized");
                 options.AddArguments("--disable-extensions");
 
-                return new RemoteWebDriver(new Uri("http://10.10.24.250:666/wd/hub"), options);
+                return new RemoteWebDriver(new Uri("http://10.10.24.250:4444"), options);
             }
         }
 
-        private static IWebDriver MobileChromeServer
-        {
-            get
-            {
-                ChromeOptions options = new();
-                //options.AddArgument("--disable-notifications");
-                options.AddArguments("--disable-infobars");
-                //options.AddArguments("--headless");
-                options.EnableMobileEmulation("iPhone X");
-                options.AddUserProfilePreference("profile.default_content_setting_values.plugins", 1);
-                options.AddArguments("--ignore-certificate-errors");
-                options.AddArguments("start-maximized");
-                options.AddArguments("--disable-extensions");
-
-                return new RemoteWebDriver(new Uri("http://localhost:666/wd/hub"), options);
-            }
-        }
+        
 
         private static IWebDriver RemoteChromeDesktop
         {
@@ -73,7 +56,7 @@ namespace SeleniumMSFlow.Drivers
                 options.AddUserProfilePreference("profile.default_content_setting_values.automatic_downloads", 1);
                 options.AddArguments("--ignore-certificate-errors");
                 options.AddArguments("start-maximized");
-                return new RemoteWebDriver(new Uri("http://10.10.24.250:666/wd/hub"), options);
+                return new RemoteWebDriver(new Uri("http://10.10.24.250:4444"), options);
             }
         }
 
@@ -91,7 +74,7 @@ namespace SeleniumMSFlow.Drivers
                 options.AddArguments("start-maximized");
                 options.AddArguments("--disable-extensions");
 
-                return new ChromeDriver("C:\\", options);
+                return new ChromeDriver("http://localhost:4444/", options);
             }
         }
 
@@ -111,7 +94,7 @@ namespace SeleniumMSFlow.Drivers
                 options.AddArguments("start-maximized");
 
 
-                return new ChromeDriver("C:\\", options);
+                return new ChromeDriver("http://localhost:4444/", options);
 
             }
         }

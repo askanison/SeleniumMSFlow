@@ -6,6 +6,5 @@
         ChromeMobileRemote,
         ChromeDesktopLocal,
         ChromeDesktopRemote,
-        ChromeMobileLocalServer
     }
 }

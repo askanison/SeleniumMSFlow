@@ -1,6 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using SeleniumMSFlow.Drivers;
 using SeleniumMSFlow.Helpers.Enums;
+using System.Diagnostics;
+using System.IO;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Infrastructure;
 using static SeleniumMSFlow.Base;
@@ -15,7 +18,6 @@ namespace SeleniumMSFlow.Hooks
         BrowserDrivers browserDrivers;
         private readonly ISpecFlowOutputHelper specFlowOutputHelper;
         ScenarioContext scenarioContext;
-
 
 
         public Hooks(BrowserDrivers browserDrivers, ISpecFlowOutputHelper specFlowOutputHelper, ScenarioContext scenarioContext)
@@ -60,5 +62,19 @@ namespace SeleniumMSFlow.Hooks
             if (scenarioContext.TestError != null)
                 specFlowOutputHelper.AddAttachment(UploadImage(driver));
         }
+
+        //[AfterTestRun]
+        //public void SendEmail()
+        //{
+        //    string path = $"{Directory.GetCurrentDirectory()}\\bin\\Debug\\net5.0";
+        //    string command = $"livingdoc feature-folder {path}\\SeleniumMSFlow.dll -t {path}\\TestExecution.json";
+        //    Process process = new();
+        //    ProcessStartInfo startInfo = new();
+        //    startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+        //    startInfo.FileName = "cmd.exe";
+        //    startInfo.Arguments = command;
+        //    process.StartInfo = startInfo;
+        //    process.Start();
+        //}
     }
 }
