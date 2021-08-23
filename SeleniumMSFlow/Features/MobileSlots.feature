@@ -5,7 +5,7 @@ Feature: MobileSlots
 
 
 Scenario: Mobile Slots search functionality
-	Given I opene Adjarabet.com home page
+	Given I have opened Adjarabet.com home page
 	And I navigate to mobile 'Slots' page
 	Then I check Mobile Slots search functional
 	| search word  |
@@ -18,7 +18,7 @@ Scenario: Mobile Slots search functionality
 
 
 Scenario: Check Mobile Slots My Casino as not authorized user
-	Given I opene Adjarabet.com home page
+	Given I have opened Adjarabet.com home page
 	And I navigate to mobile 'Slots' page
 	When I click 'My Casino' on filter
 	Then I check mobile Slots My Casino subfilter
@@ -30,7 +30,7 @@ Scenario: Check Mobile Slots My Casino as not authorized user
 
 
 Scenario: Check Mobile Slots My Casino as an authorized user
-	Given I opene Adjarabet.com home page
+	Given I have opened Adjarabet.com home page
 	And I log in using 'geocom68' and 'Paroli1#' credentials
 	And I navigate to mobile 'Slots' page
 	When I click 'My Casino' on filter
@@ -46,7 +46,7 @@ Scenario: Check Mobile Slots My Casino as an authorized user
 
 
 Scenario: Open Mobile Slot game as not authorized user
-	Given I opene Adjarabet.com home page
+	Given I have opened Adjarabet.com home page
 	And I navigate to mobile 'Slots' page
 	And I choose 'EGT' from mobile filter
 	And I click first mobile game in list

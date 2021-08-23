@@ -10,7 +10,7 @@ namespace SeleniumMSFlow.Steps
     [Binding]
     public class MobileAviatorSteps : DriverHelper
     {
-        [Given(@"I opene Adjarabet.com home page")]
+        [Given(@"I open Adjarabet.com home page")]
         [Given(@"I have opened Adjarabet.com home page")]
         public void GivenIHaveOpenedAdjarabetHomePage()
         {
