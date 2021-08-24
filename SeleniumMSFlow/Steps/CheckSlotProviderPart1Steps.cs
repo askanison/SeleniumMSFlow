@@ -4,6 +4,7 @@ using TechTalk.SpecFlow;
 using FluentAssertions;
 using static SeleniumMSFlow.Base;
 using SeleniumMSFlow.Drivers;
+using SeleniumMSFlow.Helpers;
 
 namespace SeleniumMSFlow.Steps
 {
@@ -47,8 +48,10 @@ namespace SeleniumMSFlow.Steps
         
         
         [Then(@"Correct (.*) is opened")]
-        public void ThenCorrectIsOpened(string providerUrlPart)
+        public void ThenCorrectIsOpened(string provider)
         {
+            var gameData = new ProvidersInfo(provider);
+
             ElementExists(driver, "//adj-in-games//iframe", timer: 10000).Should().BeTrue("Game iframe not found");
 
             int counter = 0;
@@ -62,7 +65,7 @@ namespace SeleniumMSFlow.Steps
             }
             while (source.Length < 15 || source == "about:blank");
 
-            source.Contains(providerUrlPart).Should().BeTrue("Opened game iframe url is incorrect");
+            source.Contains(gameData.GameInfo.ProviderUrl).Should().BeTrue("Opened game iframe url is incorrect");
             //SwitchToFrame(driver, FindElement(driver, "//adj-in-games//iframe", timer: 20000));
             
             //if (provider.Key == "EGT")

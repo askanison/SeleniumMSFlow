@@ -5,6 +5,42 @@ namespace SeleniumMSFlow.Helpers
 {
     public class ProvidersInfo
     {
+        public GameProviderInfo GameInfo;
+
+        public ProvidersInfo(string providersName)
+        {
+            GameInfo = ProvidersDict[providersName];
+        }
+
+        Dictionary<string, GameProviderInfo> ProvidersDict = new()
+        {
+            //{Igrosoft.Name, Igrosoft },
+            {EGT.Name, EGT },
+            {Amatic.Name, Amatic },
+            //{Cayetano.Name, Cayetano },
+            //{PlayNGo.Name, PlayNGo },
+            {RedTiger.Name, RedTiger },
+            {Novomatic.Name, Novomatic },
+            {Yggdrasil.Name, Yggdrasil },
+            //{Netent.Name, Netent },
+            {BFGames.Name, BFGames },
+            {Blueprint.Name, Blueprint },
+            {NYX.Name, NYX },
+            {BTG.Name, BTG },
+            {Nextgen.Name, Nextgen },
+            {Amaya.Name, Amaya },
+            {PushGaming.Name, PushGaming },
+            //{Evoplay.Name, Evoplay},
+            {Wazdan.Name, Wazdan },
+            {Synot.Name, Synot },
+            {Pragmatic.Name, Pragmatic },
+            {Playson.Name, Playson },
+            //{Booming.Name, Booming },
+            {Leander.Name, Leander },
+            //{Microgaming.Name, Microgaming }
+
+        };
+
         private static readonly GameProviderInfo Igrosoft = new()
         {
             Name = "IGROSOFT",

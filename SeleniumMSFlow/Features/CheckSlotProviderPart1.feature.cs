@@ -92,7 +92,7 @@ namespace SeleniumMSFlow.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void CheckSlotsProviderForDesktopVersion(string provider, string game, string[] exampleTags)
+        public virtual void CheckSlotsProviderForDesktopVersion(string provider, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "Desktop"};
@@ -103,7 +103,6 @@ namespace SeleniumMSFlow.Features
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Provider", provider);
-            argumentsOfScenario.Add("Game", game);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check slots provider for desktop version", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
@@ -144,7 +143,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I open random slot game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 15
- testRunner.Then(string.Format("Correct {0} is opened", game), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("Correct {0} is opened", provider), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -156,11 +155,10 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Desktop")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "EGT")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Provider", "EGT")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Game", "https://s4.egtmgs.com")]
         public virtual void CheckSlotsProviderForDesktopVersion_EGT()
         {
 #line 8
-this.CheckSlotsProviderForDesktopVersion("EGT", "https://s4.egtmgs.com", ((string[])(null)));
+this.CheckSlotsProviderForDesktopVersion("EGT", ((string[])(null)));
 #line hidden
         }
         

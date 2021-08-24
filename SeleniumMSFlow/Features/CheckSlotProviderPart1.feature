@@ -12,10 +12,10 @@ Scenario: Check slots provider for desktop version
 	When I choose <Provider> from desktop filter
 	Then The Title is changed to <Provider>
 	When I open random slot game
-	Then Correct <Game> is opened
+	Then Correct <Provider> is opened
 Examples: 
-| Provider | Game                  |
-| EGT      | https://s4.egtmgs.com |
+| Provider |
+| EGT      |
 
 
 
