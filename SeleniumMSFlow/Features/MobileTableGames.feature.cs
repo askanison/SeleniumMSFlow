@@ -93,13 +93,13 @@ namespace SeleniumMSFlow.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void CheckMobileTableGamesAsALoggedInUser(string tableGame, string url, string[] exampleTags)
+        public virtual void CheckMobileTableGamesAsAnAuthorizedUser(string tableGame, string url, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Table Game", tableGame);
             argumentsOfScenario.Add("Url", url);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check mobile Table Games as a logged in user", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check mobile Table Games as an authorized user", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -127,7 +127,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I log in using \'sqatmp2p\' and \'Paroli1#\' credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 7
- testRunner.And("I navigate to mobile \'Poker\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I navigate to mobile \'Table Games\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 8
  testRunner.When(string.Format("I click \'{0}\' button", tableGame), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -143,60 +143,167 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as a logged in user: Dominoes")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as an authorized user: Dominoes")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTableGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Dominoes")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Table Game", "Dominoes")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/domino?user=")]
-        public virtual void CheckMobileTableGamesAsALoggedInUser_Dominoes()
+        public virtual void CheckMobileTableGamesAsAnAuthorizedUser_Dominoes()
         {
 #line 4
-this.CheckMobileTableGamesAsALoggedInUser("Dominoes", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/domino?user=", ((string[])(null)));
+this.CheckMobileTableGamesAsAnAuthorizedUser("Dominoes", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/domino?user=", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as a logged in user: Bura")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as an authorized user: Bura")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTableGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Bura")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Table Game", "Bura")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/bura?user=")]
-        public virtual void CheckMobileTableGamesAsALoggedInUser_Bura()
+        public virtual void CheckMobileTableGamesAsAnAuthorizedUser_Bura()
         {
 #line 4
-this.CheckMobileTableGamesAsALoggedInUser("Bura", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/bura?user=", ((string[])(null)));
+this.CheckMobileTableGamesAsAnAuthorizedUser("Bura", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/bura?user=", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as a logged in user: Backgammon")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as an authorized user: Backgammon")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTableGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Backgammon")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Table Game", "Backgammon")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/backgammon?use" +
             "r=")]
-        public virtual void CheckMobileTableGamesAsALoggedInUser_Backgammon()
+        public virtual void CheckMobileTableGamesAsAnAuthorizedUser_Backgammon()
         {
 #line 4
-this.CheckMobileTableGamesAsALoggedInUser("Backgammon", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/backgammon?use" +
+this.CheckMobileTableGamesAsAnAuthorizedUser("Backgammon", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/backgammon?use" +
                     "r=", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as a logged in user: Seka")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as an authorized user: Seka")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTableGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Seka")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Table Game", "Seka")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/seka?user=")]
-        public virtual void CheckMobileTableGamesAsALoggedInUser_Seka()
+        public virtual void CheckMobileTableGamesAsAnAuthorizedUser_Seka()
         {
 #line 4
-this.CheckMobileTableGamesAsALoggedInUser("Seka", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/seka?user=", ((string[])(null)));
+this.CheckMobileTableGamesAsAnAuthorizedUser("Seka", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/seka?user=", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void CheckMobileTableGamesAsNotAuthorizedUser(string tableGame, string url, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("Table Game", tableGame);
+            argumentsOfScenario.Add("Url", url);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check mobile Table Games as not authorized user", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 20
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 21
+ testRunner.Given("I have opened Adjarabet.com home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 22
+ testRunner.And("I navigate to mobile \'Table Games\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 23
+ testRunner.And(string.Format("I click \'{0}\' button", tableGame), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 24
+ testRunner.When("I log in using \'sqatmp2p\' and \'Paroli1#\' from opened login form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 25
+ testRunner.Then("Table Game is launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 26
+ testRunner.And(string.Format("\'{0}\' is correct", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as not authorized user: Dominoes")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTableGames")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Dominoes")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Table Game", "Dominoes")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/domino?user=")]
+        public virtual void CheckMobileTableGamesAsNotAuthorizedUser_Dominoes()
+        {
+#line 20
+this.CheckMobileTableGamesAsNotAuthorizedUser("Dominoes", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/domino?user=", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as not authorized user: Bura")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTableGames")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Bura")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Table Game", "Bura")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/bura?user=")]
+        public virtual void CheckMobileTableGamesAsNotAuthorizedUser_Bura()
+        {
+#line 20
+this.CheckMobileTableGamesAsNotAuthorizedUser("Bura", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/bura?user=", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as not authorized user: Backgammon")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTableGames")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Backgammon")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Table Game", "Backgammon")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/backgammon?use" +
+            "r=")]
+        public virtual void CheckMobileTableGamesAsNotAuthorizedUser_Backgammon()
+        {
+#line 20
+this.CheckMobileTableGamesAsNotAuthorizedUser("Backgammon", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/backgammon?use" +
+                    "r=", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Table Games as not authorized user: Seka")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTableGames")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Seka")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Table Game", "Seka")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/seka?user=")]
+        public virtual void CheckMobileTableGamesAsNotAuthorizedUser_Seka()
+        {
+#line 20
+this.CheckMobileTableGamesAsNotAuthorizedUser("Seka", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/seka?user=", ((string[])(null)));
 #line hidden
         }
     }

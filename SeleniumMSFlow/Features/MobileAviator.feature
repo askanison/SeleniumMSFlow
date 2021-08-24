@@ -1,6 +1,6 @@
 ﻿@Mobile
 Feature: MobileAviator
-![MobileAviator](https://res.cloudinary.com/dpr7nvtku/image/upload/v1629644946/Adjarabet/MobileAviator_lyehxc.png)
+![Mobile Aviator](https://res.cloudinary.com/dpr7nvtku/image/upload/v1629644946/Adjarabet/MobileAviator_lyehxc.png)
 Mobile Aviator page with slider and one play button
 
 

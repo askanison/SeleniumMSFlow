@@ -1,5 +1,6 @@
 ﻿@Mobile
 Feature: MobileTurboGames
+![Mobile Turbo Games](https://res.cloudinary.com/dpr7nvtku/image/upload/v1629744765/Adjarabet/MobileTurboGames_ciezep.png)
 
 Scenario: Check mobile Turbo Games as a logged in user
 	Given I have opened Adjarabet.com home page

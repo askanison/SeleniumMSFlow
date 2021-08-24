@@ -1,6 +1,6 @@
 ﻿@Mobile
 Feature: MobileSlots
-
+![Mobile Slots](https://res.cloudinary.com/dpr7nvtku/image/upload/v1629744561/Adjarabet/MobileSlots_fnrurh.png)
 
 
 

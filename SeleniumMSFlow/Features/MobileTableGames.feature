@@ -1,5 +1,6 @@
 ﻿@Mobile
 Feature: MobileTableGames
+![Mobile Table Games](https://res.cloudinary.com/dpr7nvtku/image/upload/v1629734374/Adjarabet/MobileTableGames_fgsfqk.png)
 
 Scenario: Check mobile Table Games as an authorized user
 	Given I have opened Adjarabet.com home page
