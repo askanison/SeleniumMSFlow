@@ -20,17 +20,16 @@ namespace SeleniumMSFlow.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class MobileSportsBookFeature
+    public partial class CheckSlotProviderPart1Feature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-        private string[] _featureTags = new string[] {
-                "Mobile"};
+        private string[] _featureTags = ((string[])(null));
         
-#line 1 "MobileSportsbook.feature"
+#line 1 "CheckSlotProviderPart1.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -49,9 +48,8 @@ namespace SeleniumMSFlow.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "MobileSportsBook", "![Mobile SportsBook](https://res.cloudinary.com/dpr7nvtku/image/upload/v162974456" +
-                    "0/Adjarabet/MobileSportsBook_wbknoh.png)", ProgrammingLanguage.CSharp, new string[] {
-                        "Mobile"});
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Check Slot Provider Part 1", "Check if slots filter works\r\nCheck if provider name is displayed \r\nOpen single ga" +
+                    "me from every provider", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -66,9 +64,9 @@ namespace SeleniumMSFlow.Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "MobileSportsBook")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Check Slot Provider Part 1")))
             {
-                global::SeleniumMSFlow.Features.MobileSportsBookFeature.FeatureSetup(null);
+                global::SeleniumMSFlow.Features.CheckSlotProviderPart1Feature.FeatureSetup(null);
             }
         }
         
@@ -94,16 +92,20 @@ namespace SeleniumMSFlow.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Mobile SportsBook as an authorized user")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileSportsBook")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
-        public virtual void MobileSportsBookAsAnAuthorizedUser()
+        public virtual void CheckSlotsProviderForDesktopVersion(string provider, string game, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] @__tags = new string[] {
+                    "Desktop"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Mobile SportsBook as an authorized user", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 7
+            argumentsOfScenario.Add("Provider", provider);
+            argumentsOfScenario.Add("Game", game);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check slots provider for desktop version", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -123,44 +125,56 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
+#line 9
  testRunner.Given("I have opened Adjarabet.com home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 9
- testRunner.And("I log in using \'sqatmsports\' and \'Paroli1#\' credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 10
- testRunner.When("I navigate to mobile \'SportsBook\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I log in using \'slotsprovurld1\' and \'Paroli1#\' credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
- testRunner.Then("User is logged in on mobile SportsBook page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I navigate to desktop \'Slots\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.And("I navigate to \'Home\' page from mobile Sportsbook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When(string.Format("I choose {0} from desktop filter", provider), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
- testRunner.And("I log out", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then(string.Format("The Title is changed to {0}", provider), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 14
- testRunner.When("I navigate to mobile \'SportsBook\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I open random slot game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 15
- testRunner.Then("User is logged out on mobile SportsBook page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("Correct {0} is opened", game), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Mobile SportsBook as not authorized user")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileSportsBook")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
-        public virtual void MobileSportsBookAsNotAuthorizedUser()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check slots provider for desktop version: EGT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Check Slot Provider Part 1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Desktop")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "EGT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Provider", "EGT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Game", "https://s4.egtmgs.com")]
+        public virtual void CheckSlotsProviderForDesktopVersion_EGT()
         {
-            string[] tagsOfScenario = ((string[])(null));
+#line 8
+this.CheckSlotsProviderForDesktopVersion("EGT", "https://s4.egtmgs.com", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check slots provider for mobile version")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Check Slot Provider Part 1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        public virtual void CheckSlotsProviderForMobileVersion()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Mobile"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Mobile SportsBook as not authorized user", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 18
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check slots provider for mobile version", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 23
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -180,32 +194,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 19
+#line 24
  testRunner.Given("I have opened Adjarabet.com home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 20
- testRunner.And("I navigate to mobile \'SportsBook\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 21
- testRunner.And("I log in from mobile SportsBook page using \'sqatmsports\' and \'Paroli1#\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 22
- testRunner.When("I navigate to \'Home\' page from mobile Sportsbook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 23
- testRunner.Then("User is logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 24
- testRunner.And("I navigate to mobile \'SportsBook\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 25
- testRunner.And("I log out on mobile SportsBook page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I log in using \'{username}\' and \'{password}\' credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
- testRunner.When("I navigate to \'Home\' page from mobile Sportsbook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I navigate to mobile \'Slots\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
- testRunner.Then("User is logged out", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I choose <Provider> from mobile filter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 28
+ testRunner.Then("<Url> is changed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 29
+ testRunner.When("I open random slot game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 30
+ testRunner.Then("Correct <game> is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

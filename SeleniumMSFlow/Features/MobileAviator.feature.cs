@@ -49,9 +49,9 @@ namespace SeleniumMSFlow.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "MobileAviator", "![MobileAviator](https://res.cloudinary.com/dpr7nvtku/image/upload/v1629644946/Ad" +
-                    "jarabet/MobileAviator_lyehxc.png)\r\nMobile Aviator page with slider and one play " +
-                    "button", ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "MobileAviator", "![Mobile Aviator](https://res.cloudinary.com/dpr7nvtku/image/upload/v1629644946/A" +
+                    "djarabet/MobileAviator_lyehxc.png)\r\nMobile Aviator page with slider and one play" +
+                    " button", ProgrammingLanguage.CSharp, new string[] {
                         "Mobile"});
             testRunner.OnFeatureStart(featureInfo);
         }

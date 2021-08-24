@@ -346,10 +346,10 @@ namespace SeleniumMSFlow
                     case "sportsbook":
                         ClickToElement(driver, "//div[@data-id='mobile-header-navigation']//a[contains(@href,'/Sportsbook')]", "Mobile Sportsbook button not found in header navigation");
                         break;
-                    case "Exchange":
+                    case "exchange":
                         ClickToElement(driver, "//div[@data-id='mobile-header-navigation']//a[contains(@href,'/Exchange')]", "Mobile Exchange button not found in header navigation");
                         break;
-                    case "Slots":
+                    case "slots":
                         ClickToElement(driver, "//div[@data-id='mobile-header-navigation']//a[contains(@href,'/Slots')]", "Mobile Slots button not found in header navigation");
                         break;
                     case "casino":
@@ -369,7 +369,7 @@ namespace SeleniumMSFlow
                         break;
 
                     default:
-                        throw new Exception($"Header navigatiob button for {page} doesn't exist");
+                        throw new Exception($"Mobile header navigatiob button for {page} doesn't exist");
                 }
             }
             catch (Exception ex)
@@ -378,5 +378,56 @@ namespace SeleniumMSFlow
                 throw new Exception(ex.Message);
             }
         }
+
+        public static void DesktopHeaderNavigation(IWebDriver driver, string page)
+        {
+            try
+            {
+                if (!ElementExists(driver, "//adj-navigation[@id='main-navigation']"))
+                    Scroll(driver, -1000);
+                switch (page.ToLower())
+                {
+                    case "home page":
+                        ClickToElement(driver, "//div[@data-id='ab-hp']", "Adjarabet desktop header logo not found");
+                        break;
+                    case "sportsbook":
+                        ClickToElement(driver, "//adj-navigation[@id='main-navigation']//a[contains(@href,'/Sportsbook')]", "Desktop Sportsbook button not found in header navigation");
+                        break;
+                    case "exchange":
+                        ClickToElement(driver, "//adj-navigation[@id='main-navigation']//a[contains(@href,'/Exchange')]", "Desktop Exchange button not found in header navigation");
+                        break;
+                    case "virtual sport":
+                        ClickToElement(driver, "//adj-navigation[@id='main-navigation']//a[contains(@href,'/VirtualSport')]", "Desktop Virtual Sport button not found in header navigation");
+                        break;
+                    case "slots":
+                        ClickToElement(driver, "//adj-navigation[@id='main-navigation']//a[contains(@href,'/Slots')]", "Desktop Slots button not found in header navigation");
+                        break;
+                    case "casino":
+                        ClickToElement(driver, "//adj-navigation[@id='main-navigation']//a[contains(@href,'/Casino')]", "Desktop Casino button not found in header navigation");
+                        break;
+                    case "poker":
+                        ClickToElement(driver, "//adj-navigation[@id='main-navigation']//a[contains(@href,'/Poker')]", "Desktop Poker button not found in header navigation");
+                        break;
+                    case "table games":
+                        ClickToElement(driver, "//adj-navigation[@id='main-navigation']//a[contains(@href,'/Games')]", "Desktop Table Games button not found in header navigation");
+                        break;
+                    case "aviator":
+                        ClickToElement(driver, "//adj-navigation[@id='main-navigation']//a[contains(@href,'/Aviator')]", "Desktop Aviator button not found in header navigation");
+                        break;
+                    case "turbo games":
+                        ClickToElement(driver, "//adj-navigation[@id='main-navigation']//a[contains(@href,'/TurboGames')]", "Desktop Turbo Games button not found in header navigation");
+                        break;
+
+                    default:
+                        throw new Exception($"Desktop header navigation button for {page} doesn't exist");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

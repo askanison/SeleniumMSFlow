@@ -49,7 +49,8 @@ namespace SeleniumMSFlow.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "MobileTableGames", null, ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "MobileTableGames", "![Mobile Table Games](https://res.cloudinary.com/dpr7nvtku/image/upload/v16297343" +
+                    "74/Adjarabet/MobileTableGames_fgsfqk.png)", ProgrammingLanguage.CSharp, new string[] {
                         "Mobile"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -100,7 +101,7 @@ namespace SeleniumMSFlow.Features
             argumentsOfScenario.Add("Table Game", tableGame);
             argumentsOfScenario.Add("Url", url);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check mobile Table Games as an authorized user", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 4
+#line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -120,22 +121,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 6
  testRunner.Given("I have opened Adjarabet.com home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 6
+#line 7
  testRunner.And("I log in using \'sqatmp2p\' and \'Paroli1#\' credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 7
+#line 8
  testRunner.And("I navigate to mobile \'Table Games\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 8
+#line 9
  testRunner.When(string.Format("I click \'{0}\' button", tableGame), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 9
+#line 10
  testRunner.Then("Table Game is launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 10
+#line 11
  testRunner.And(string.Format("\'{0}\' is correct", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -151,7 +152,7 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/domino?user=")]
         public virtual void CheckMobileTableGamesAsAnAuthorizedUser_Dominoes()
         {
-#line 4
+#line 5
 this.CheckMobileTableGamesAsAnAuthorizedUser("Dominoes", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/domino?user=", ((string[])(null)));
 #line hidden
         }
@@ -165,7 +166,7 @@ this.CheckMobileTableGamesAsAnAuthorizedUser("Dominoes", "https://p2p.adjarabet.
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/bura?user=")]
         public virtual void CheckMobileTableGamesAsAnAuthorizedUser_Bura()
         {
-#line 4
+#line 5
 this.CheckMobileTableGamesAsAnAuthorizedUser("Bura", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/bura?user=", ((string[])(null)));
 #line hidden
         }
@@ -180,7 +181,7 @@ this.CheckMobileTableGamesAsAnAuthorizedUser("Bura", "https://p2p.adjarabet.com/
             "r=")]
         public virtual void CheckMobileTableGamesAsAnAuthorizedUser_Backgammon()
         {
-#line 4
+#line 5
 this.CheckMobileTableGamesAsAnAuthorizedUser("Backgammon", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/backgammon?use" +
                     "r=", ((string[])(null)));
 #line hidden
@@ -195,7 +196,7 @@ this.CheckMobileTableGamesAsAnAuthorizedUser("Backgammon", "https://p2p.adjarabe
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/seka?user=")]
         public virtual void CheckMobileTableGamesAsAnAuthorizedUser_Seka()
         {
-#line 4
+#line 5
 this.CheckMobileTableGamesAsAnAuthorizedUser("Seka", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/seka?user=", ((string[])(null)));
 #line hidden
         }
@@ -207,7 +208,7 @@ this.CheckMobileTableGamesAsAnAuthorizedUser("Seka", "https://p2p.adjarabet.com/
             argumentsOfScenario.Add("Table Game", tableGame);
             argumentsOfScenario.Add("Url", url);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check mobile Table Games as not authorized user", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 20
+#line 21
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -227,22 +228,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 21
+#line 22
  testRunner.Given("I have opened Adjarabet.com home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 22
+#line 23
  testRunner.And("I navigate to mobile \'Table Games\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
+#line 24
  testRunner.And(string.Format("I click \'{0}\' button", tableGame), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 25
  testRunner.When("I log in using \'sqatmp2p\' and \'Paroli1#\' from opened login form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 25
+#line 26
  testRunner.Then("Table Game is launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 26
+#line 27
  testRunner.And(string.Format("\'{0}\' is correct", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -258,7 +259,7 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/domino?user=")]
         public virtual void CheckMobileTableGamesAsNotAuthorizedUser_Dominoes()
         {
-#line 20
+#line 21
 this.CheckMobileTableGamesAsNotAuthorizedUser("Dominoes", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/domino?user=", ((string[])(null)));
 #line hidden
         }
@@ -272,7 +273,7 @@ this.CheckMobileTableGamesAsNotAuthorizedUser("Dominoes", "https://p2p.adjarabet
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/bura?user=")]
         public virtual void CheckMobileTableGamesAsNotAuthorizedUser_Bura()
         {
-#line 20
+#line 21
 this.CheckMobileTableGamesAsNotAuthorizedUser("Bura", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/bura?user=", ((string[])(null)));
 #line hidden
         }
@@ -287,7 +288,7 @@ this.CheckMobileTableGamesAsNotAuthorizedUser("Bura", "https://p2p.adjarabet.com
             "r=")]
         public virtual void CheckMobileTableGamesAsNotAuthorizedUser_Backgammon()
         {
-#line 20
+#line 21
 this.CheckMobileTableGamesAsNotAuthorizedUser("Backgammon", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/backgammon?use" +
                     "r=", ((string[])(null)));
 #line hidden
@@ -302,7 +303,7 @@ this.CheckMobileTableGamesAsNotAuthorizedUser("Backgammon", "https://p2p.adjarab
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/seka?user=")]
         public virtual void CheckMobileTableGamesAsNotAuthorizedUser_Seka()
         {
-#line 20
+#line 21
 this.CheckMobileTableGamesAsNotAuthorizedUser("Seka", "https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/seka?user=", ((string[])(null)));
 #line hidden
         }

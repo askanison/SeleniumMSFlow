@@ -20,7 +20,7 @@ namespace SeleniumMSFlow.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class DesktopSlotsFeature
+    public partial class DesktopSlotsFilterFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -30,7 +30,7 @@ namespace SeleniumMSFlow.Features
         private string[] _featureTags = new string[] {
                 "Desktop"};
         
-#line 1 "DesktopSlots.feature"
+#line 1 "DesktopSlotsFilter.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -49,7 +49,8 @@ namespace SeleniumMSFlow.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "DesktopSlots", null, ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "DesktopSlotsFilter", "![Desktop Slots Filter](https://res.cloudinary.com/dpr7nvtku/image/upload/v162974" +
+                    "5194/Adjarabet/DesktopSlotsFilter_hz8hqp.png)", ProgrammingLanguage.CSharp, new string[] {
                         "Desktop"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -65,9 +66,9 @@ namespace SeleniumMSFlow.Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "DesktopSlots")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "DesktopSlotsFilter")))
             {
-                global::SeleniumMSFlow.Features.DesktopSlotsFeature.FeatureSetup(null);
+                global::SeleniumMSFlow.Features.DesktopSlotsFilterFeature.FeatureSetup(null);
             }
         }
         

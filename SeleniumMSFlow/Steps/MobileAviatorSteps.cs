@@ -21,12 +21,27 @@ namespace SeleniumMSFlow.Steps
         [When(@"I log in using '(.*)' and '(.*)' credentials")]
         public void GivenILogInUsingAndCredentials(string username, string password)
         {
-            ClickToElement(driver, "//a[@data-id='mobile-login']", "Mobile header authorization button not found");
-            SendKeys(driver, "//input[@data-id='username']", username, "Mobile authorization form username input not found");
-            SendKeys(driver, "//input[@data-id='password']", password, "Mobile authorization form password input not found");
-            ClickToElement(driver, "//button[@data-id='mobile-login-btn']", "Mobile authorization form Login button not found");
-            WaitUntilElementVanishes(driver, "//adj-login-mobile");
-            ElementExists(driver, "//adj-login-mobile").Should().BeFalse("Mobile login for didn't vanish after authorization, or login process failed");
+            if (driver.Url.Contains("/mobile"))
+            {
+                ClickToElement(driver, "//a[@data-id='mobile-login']", "Mobile header authorization button not found");
+                SendKeys(driver, "//input[@data-id='username']", username, "Mobile authorization form username input not found");
+                SendKeys(driver, "//input[@data-id='password']", password, "Mobile authorization form password input not found");
+                ClickToElement(driver, "//button[@data-id='mobile-login-btn']", "Mobile authorization form Login button not found");
+                WaitUntilElementVanishes(driver, "//adj-login-mobile");
+                ElementExists(driver, "//adj-login-mobile").Should().BeFalse("Mobile login for didn't vanish after authorization, or login process failed");
+            }
+            else
+            {
+                SendKeys(driver, "//input[@data-id='username']", username, "Desktop header username input not found");
+                SendKeys(driver, "//input[@data-id='password']", password, "Desktop header password input not found");
+                ClickToElement(driver, "//button[@data-id='login-btn']", "Desktop header Login button not found");
+                WaitUntilElementVanishes(driver, "//button[@data-id='login-btn']");
+                ElementExists(driver, "//span[@data-id='username-area']", timer:10000).Should().BeTrue("Desktop authorization process failed, username not found");
+
+
+
+            }
+
         }
         
         [Given(@"I navigate to mobile '(.*)' page")]

@@ -49,7 +49,8 @@ namespace SeleniumMSFlow.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "MobileSlots", null, ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "MobileSlots", "![Mobile Slots](https://res.cloudinary.com/dpr7nvtku/image/upload/v1629744561/Adj" +
+                    "arabet/MobileSlots_fnrurh.png)", ProgrammingLanguage.CSharp, new string[] {
                         "Mobile"});
             testRunner.OnFeatureStart(featureInfo);
         }
